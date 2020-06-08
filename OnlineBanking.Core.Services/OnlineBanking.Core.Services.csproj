@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineBanking.Data\OnlineBanking.Data.csproj" />
+    <ProjectReference Include="..\OnlineBanking.Interfaces\OnlineBanking.Core.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
