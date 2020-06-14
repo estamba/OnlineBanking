@@ -49,7 +49,7 @@ namespace OnlineBanking.Core.Services
                 Amount = 0,
                 SourceAccount = account.Number,
                 TargetAccount = account.Number,
-                Status = TransctionStatus.Pending,
+                Status = TransctionStatus.Successful,
                 TransactionDate = DateTime.Now,
                 Type = TransactionType.Credit
                  

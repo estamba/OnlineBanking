@@ -60,7 +60,12 @@ namespace OnlineBanking.Web.Controllers
             if (!ModelState.IsValid) return View(confirmationViewModel);
 
             transactionService.CompleteTransaction(confirmationViewModel.TransactionId);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Success");
+        }
+        public IActionResult Success()
+        {
+
+            return View();
         }
     }
 }
