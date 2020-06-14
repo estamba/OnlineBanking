@@ -17,6 +17,8 @@ namespace OnlineBanking.Web.Extensions
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ITransactionService, TransactionService>();
+
 
 
 

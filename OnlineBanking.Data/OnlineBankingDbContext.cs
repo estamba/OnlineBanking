@@ -17,7 +17,7 @@ namespace OnlineBanking.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql(configuration.GetConnectionString("DefaultConnection"));
+                optionsBuilder.UseMySql(configuration.GetConnectionString("DefaultConnection"), mySqlOptions => mySqlOptions.ServerVersion(new Version(8,0,20), Pomelo.EntityFrameworkCore.MySql.Infrastructure.ServerType.MySql));
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

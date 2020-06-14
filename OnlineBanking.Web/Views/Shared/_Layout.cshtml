@@ -47,6 +47,7 @@
         }
     </style>
 
+    @RenderSection("styles",false)
 </head>
 
 <body>
@@ -75,7 +76,7 @@
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" href="@Url.Action("AddUser","Account")">
-                                        <i class="ni ni-single-02 text-yellow"></i>
+                                        <i class="ni ni-single-02 text-default"></i>
                                         <span class="nav-link-text">Add User</span>
                                     </a>
                                 </li>
@@ -84,11 +85,16 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("UserList","Account")">
-                                <i class="ni ni-single-02 text-yellow"></i>
+                                <i class="ni ni-single-02 text-default"></i>
                                 <span class="nav-link-text">User List</span>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Transfer","Transaction")">
+                                <i class="ni ni-money-coins text-default"></i>
+                                <span class="nav-link-text">Fund Transfer</span>
+                            </a>
+                        </li>
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
@@ -356,22 +362,7 @@
                             &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                            </li>
-                        </ul>
-                    </div>
+                  
                 </div>
             </footer>
         </div>

@@ -1,0 +1,67 @@
+﻿@model TransferViewModel
+@{
+    ViewData["Title"] = "Transfer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form asp-action="Transfer" asp-controller="Transaction" method="post">
+
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1"> Beneficial Name</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="BeneficiaryAccountNumber">
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1">Beneficiary Account Number</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  asp-for="BeneficiaryName">
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1"> Beneficiary Bank</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="BeneficiaryBank">
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1">Beneficiary Bank Swift Code</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="BeneficiaryBankSwiftCode">
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1">Purpose of Transfer</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <textarea type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Description">
+</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <label class="control-label col-md-3" for="exampleInputEmail1">Account</label>
+
+            <div class="form-group col-md-6 col-lg-6">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Amount">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-4">
+                <button type="submit" class="btn btn-primary" style="width:300px">Transfer</button>
+
+            </div>
+
+        </div>
+    </form>
+
+
